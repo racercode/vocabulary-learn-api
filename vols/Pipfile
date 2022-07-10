@@ -1,0 +1,25 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+django-rest-framework = "*"
+django-cors-headers = "*"
+djoser = "*"
+pillow = "*"
+stripe = "*"
+psycopg2 = "*"
+python-dotenv = "*"
+bs4 = "*"
+gunicorn = "*"
+dj-database-url = "*"
+dj-static = "*"
+django-heroku = "*"
+static3 = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"
