@@ -30,6 +30,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     'https://vocabulary-learn.herokuapp.com/',
+    'https://vocabulary-learn-api.herokuapp.com/',
 ]
 
 
