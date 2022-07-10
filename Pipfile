@@ -18,6 +18,7 @@ dj-database-url = "*"
 dj-static = "*"
 django-heroku = "*"
 static3 = "*"
+whitenoise = "*"
 
 [dev-packages]
 

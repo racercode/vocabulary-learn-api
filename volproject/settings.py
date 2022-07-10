@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     'https://vocabulary-learn.herokuapp.com/',
@@ -58,6 +58,7 @@ CORS_ALLOWED_ORIGINS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -94,11 +95,11 @@ WSGI_APPLICATION = 'volproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'vol-project',
-        'USER': 'postgres',
+        'NAME': 'd94pb3qamks1e',
+        'USER': 'bcojbeacorondv',
         'PASSWORD': getenv('PASSWORD'),
-        'HOST': 'localhost',
-        'PORT': '5555',
+        'HOST': 'ec2-3-222-74-92.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
