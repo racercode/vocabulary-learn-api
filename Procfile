@@ -1,4 +1,3 @@
-release: python manage.py makemigrations --no-input
-release: python manage.py migrate --no-input
-
-web: gunicorn vocabulary-learn.wsgi --log-file -  
+web: gunicorn volproject.wsgi:application --log-file - --log-level debug
+python manage.py collectstatic --noinput
+manage.py migrate
