@@ -38,6 +38,10 @@ class get_category(APIView):
             }, status=status.HTTP_400_BAD_REQUEST)
 
 def get_by_id(id):
+    if not categories.objects.filter(id=id).exists():
+        return Response({
+            'info': 'Wrong category id !'
+        }, status=status.HTTP_400_BAD_REQUEST)
     Category = categories.objects.filter(id = id)[0]
     words = Category.vol_list
     ret = []
