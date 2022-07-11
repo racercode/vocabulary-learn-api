@@ -96,10 +96,10 @@ WSGI_APPLICATION = 'volproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd94pb3qamks1e',
-        'USER': 'bcojbeacorondv',
+        'NAME': 'd919e0gktt8mq9',
+        'USER': 'nvbsudkvxqddlq',
         'PASSWORD': getenv('PASSWORD'),
-        'HOST': 'ec2-3-222-74-92.compute-1.amazonaws.com',
+        'HOST': 'ec2-52-205-61-230.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
