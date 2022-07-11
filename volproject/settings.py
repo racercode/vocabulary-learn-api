@@ -26,11 +26,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
-    'https://vocabulary-learn.herokuapp.com/',
-    'https://vocabulary-learn-api.herokuapp.com/',
+    'https://vocabulary-learn.herokuapp.com',
+    'https://vocabulary-learn-api.herokuapp.com',
 ]
 
 
@@ -58,11 +58,11 @@ CORS_ALLOWED_ORIGINS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
-    'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -70,6 +70,9 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'volproject.urls'
+
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_CREDENTIALS = True
 
 TEMPLATES = [
     {
@@ -96,11 +99,11 @@ WSGI_APPLICATION = 'volproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd4m8trqsfdvttq',
-        'USER': 'hkqclkxtlbroln',
+        'NAME': 'vocabulary-learn',
+        'USER': 'postgres',
         'PASSWORD': getenv('PASSWORD'),
-        'HOST': 'ec2-52-205-61-230.compute-1.amazonaws.com',
-        'PORT': '5432',
+        'HOST': 'localhost',
+        'PORT': '5555',
     }
 }
 
