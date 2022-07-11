@@ -99,11 +99,11 @@ WSGI_APPLICATION = 'volproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'vocabulary-learn',
-        'USER': 'postgres',
+        'NAME': 'd4m8trqsfdvttq',
+        'USER': 'hkqclkxtlbroln',
         'PASSWORD': getenv('PASSWORD'),
-        'HOST': 'localhost',
-        'PORT': '5555',
+        'HOST': 'ec2-52-205-61-230.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
