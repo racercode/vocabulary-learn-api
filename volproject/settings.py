@@ -35,6 +35,7 @@ ALLOWED_HOSTS = [
 
 
 # Application definition
+CORS_ORIGIN_ALLOW_ALL=True
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -71,8 +72,6 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'volproject.urls'
 
-CORS_ORIGIN_ALLOW_ALL = True
-CORS_ALLOW_CREDENTIALS = True
 
 TEMPLATES = [
     {
