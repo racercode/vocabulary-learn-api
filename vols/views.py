@@ -112,7 +112,9 @@ class add_category(APIView):
         data = request.data
         name = data['name']
         description = data['description']
-        vol_list = dict(request.data)['vol_list']
+        print(data['vol_list'], type(data['vol_list']))
+        vol_list = data['vol_list']
+        
         ret = buildwords(vol_list)
         if ret[0] != 'Success':
             return Response({
@@ -139,7 +141,6 @@ def buildwords(vol_list):
             for i in range(2, 7):
                 for j in result[i]:
                     wordchanges.append(j)
-            print(wordchanges)
             length = len(wordchanges)
             for i in range(length):
                 wordchanges.append(wordchanges[i].replace(wordchanges[i], wordchanges[i][0].upper() + wordchanges[i][1:]))
