@@ -98,10 +98,10 @@ WSGI_APPLICATION = 'volproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'vol_project_name',
-        'USER': 'postgre',
+        'NAME': 'rsknzraf',
+        'USER': 'rsknzraf',
         'PASSWORD': getenv('PASSWORD'),
-        'HOST': 'dpg-cf2m7thgp3jl0q2avf6g-a',
+        'HOST': 'tiny.db.elephantsql.com',
         'PORT': '5432',
     }
 }
