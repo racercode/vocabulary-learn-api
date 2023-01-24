@@ -32,6 +32,7 @@ ALLOWED_HOSTS = [
     "http://localhost:3000",
     "https://wordlearner.onrender.com",
     'https://MDjudge-bot.gary940610.repl.co',
+    'http://172.31.128.147',
 ]
 
 
@@ -58,6 +59,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "https://wordlearner.onrender.com",
     'https://MDjudge-bot.gary940610.repl.co',
+    'http://172.31.128.147',
 ]
 
 MIDDLEWARE = [
