@@ -29,13 +29,14 @@ SECRET_KEY = getenv('SECRET_KEY')
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'https://vocabulary-learn.herokuapp.com',
-    'https://vocabulary-learn-api.herokuapp.com',
+    "http://localhost:3000",
+    "https://wordlearner.onrender.com",
+    'https://MDjudge-bot.gary940610.repl.co',
 ]
 
 
 # Application definition
-CORS_ORIGIN_ALLOW_ALL=True
+CORS_ORIGIN_ALLOW_ALL=False
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -55,7 +56,8 @@ INSTALLED_APPS = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "https://vocabulary-learn.herokuapp.com",
+    "https://wordlearner.onrender.com",
+    'https://MDjudge-bot.gary940610.repl.co',
 ]
 
 MIDDLEWARE = [

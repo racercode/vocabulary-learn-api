@@ -69,6 +69,8 @@ class check(APIView):
         correct = []
         chinese = []
         data = request.data
+        print(data)
+        print(correct)
         count = 0
         for item in data:
             word = Sentence.objects.filter(id = item['id'])[0].ans
